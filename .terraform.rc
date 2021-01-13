@@ -1,0 +1,10 @@
+plugin_cache_dir = "/Users/amontgomery/.terraform.d/plugin-cache"
+provider_installation {
+  filesystem_mirror {
+    path    = "/Users/amontgomery/.terraform.d/plugins"
+    include = ["registry.terraform.io/terraform-providers/*"]
+  }
+  direct {
+    exclude = ["registry.terraform.io/terraform-providers/*"]
+  }
+}
