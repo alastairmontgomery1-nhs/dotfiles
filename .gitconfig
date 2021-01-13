@@ -1,0 +1,24 @@
+[include]
+path = /Users/amontgomery/cx/dev_tools/scripts/git/gitconfig
+[user]
+	name = Alastair Montgomery
+	email = amontgomery@williamhill.co.uk
+	signingkey = B38D6917
+[push]
+	default = simple
+[diff]
+	tool = diffuse
+[merge]
+	tool = diffuse
+[core]
+	editor = /usr/local/bin/nvim
+	excludesfile = ~/.gitignore
+[init]
+	templateDirm = /Users/amontgomery/.git-template
+	templateDir = /Users/amontgomery/.git-template
+[url "ssh://git@git.nonprod.williamhill.plc/"]
+     insteadOf = https://git.nonprod.williamhill.plc/
+[pull]
+	rebase = false
+[help]
+	autocorrect = 1
