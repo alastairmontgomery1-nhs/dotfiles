@@ -1,0 +1,17 @@
+[default]
+app_id               =
+url                  = https://williamhill-cocloudservices.okta.com/home/amazon_aws/0oaco29stYyRCcx5F355/272
+username             = amontgomery@Group.WilliamHill.PLC
+provider             = Okta
+mfa                  = PUSH
+skip_verify          = false
+timeout              = 0
+aws_urn              = urn:amazon:webservices
+aws_session_duration = 3600
+aws_profile          = williamhill
+resource_id          =
+subdomain            =
+role_arn             =
+region               = eu-west-1
+http_attempts_count  =
+http_retry_delay     =
