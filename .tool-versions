@@ -1,6 +1,6 @@
 bat 0.15.4
 fd 8.1.1
-golang 1.14
+golang 1.15.6
 helm 3.2.4
 imagemagick system
 jq jq-1.6
@@ -8,12 +8,12 @@ kind 0.8.1
 kubectl 1.18.3
 kustomize 3.6.1
 nodejs system
-python 3.8.6 3.7.7 2.7.17 system
-ruby 2.7.1
+python 3.8.6
+ruby 3.0.0
 saml2aws 2.26.1
 skaffold 1.12.0
 starship 0.41.3
-terraform 0.12.24 0.11.14
+terraform 0.12.24
 terraform-docs v0.10.1
 terragrunt 0.23.12
 tflint 0.20.2
