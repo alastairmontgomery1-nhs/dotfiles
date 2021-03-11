@@ -1,0 +1,5 @@
+xrandr -s 1400x1050
+tint2 &
+compton &
+nitrogen --random --save --set-zoom-fill &
+
