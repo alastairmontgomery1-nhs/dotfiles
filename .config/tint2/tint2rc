@@ -175,10 +175,10 @@ launcher_icon_asb = 100 0 0
 launcher_icon_theme_override = 0
 startup_notifications = 0
 launcher_tooltip = 0
-launcher_item_app = /home/al/.config/tint2/launchers/obmenu-launch.desktop
-launcher_item_app = /home/al/.config/tint2/launchers/pcmanfm.desktop
-launcher_item_app = /home/al/.config/tint2/launchers/Alacritty.desktop
-launcher_item_app = /home/al/.config/tint2/launchers/brave-browser.desktop
+launcher_item_app = /home/alastair/.config/tint2/launchers/obmenu-launch.desktop
+launcher_item_app = /home/alastair/.config/tint2/launchers/pcmanfm.desktop
+launcher_item_app = /home/alastair/.config/tint2/launchers/Alacritty.desktop
+launcher_item_app = /home/alastair/.config/tint2/launchers/brave-browser.desktop
 
 #-------------------------------------
 # Clock
