@@ -3,3 +3,4 @@ tint2 &
 compton &
 nitrogen --random --save --set-zoom-fill &
 barrier &
+mmaker openbox -f -t xterm &
