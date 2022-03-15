@@ -1,6 +1,6 @@
 [user]
 	name = Alastair Montgomery
-	email = amontgomery@williamhill.co.uk
+  email = alastair@montgomery.me.uk
 	signingkey = B38D6917
 [push]
 	default = simple
@@ -12,21 +12,13 @@
 	editor = /usr/bin/vim
 	excludesfile = ~/.gitignore
 [init]
-	templateDirm = /Users/amontgomery/.git-template
-	templateDir = /Users/amontgomery/.git-template
 	defaultBranch = main
-[url "ssh://git@git.nonprod.williamhill.plc/"]
-     insteadOf = https://git.nonprod.williamhill.plc/
 [pull]
 	rebase = false
 [help]
 	autocorrect = 1
 [http]
 sslverify = false
-
-[url "git@git.nonprod.williamhill.plc:"]
-# Map whgit: to our gitlab.
-    insteadOf = "whgit:"
 
 [url "https://github.com/"]
 # Map github ssh to https
@@ -82,3 +74,5 @@ sslverify = false
 	hotfix = hotfix/
 	support = support/
 	versiontag = 
+[credential]
+	helper = store
