@@ -77,6 +77,7 @@ plugins=(
   fzf
   zsh-autosuggestions
   z
+  tmux
 )
 
 source $ZSH/oh-my-zsh.sh
