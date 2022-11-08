@@ -1,13 +1,13 @@
 [user]
 	name = Alastair Montgomery
-  email = alastair@montgomery.me.uk
+  email = alastair.montgomery@bjss.com
 	signingkey = B38D6917
 [push]
 	default = simple
 [diff]
-	tool = meld
+	tool = vimdiff
 [merge]
-	tool = meld
+	tool = vimdiff
 [core]
 	editor = /usr/bin/vim
 	excludesfile = ~/.gitignore
@@ -19,14 +19,6 @@
 	autocorrect = 1
 [http]
 sslverify = false
-
-[url "https://github.com/"]
-# Map github ssh to https
-    insteadOf = "git@github.com:"
-
-[url "https://github.com/"]
-# Map github ssh to https
-    insteadOf = "git://github.com/"
 
 [color]
 # Switch colour on.
