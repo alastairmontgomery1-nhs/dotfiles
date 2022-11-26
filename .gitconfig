@@ -20,14 +20,6 @@
 [http]
 sslverify = false
 
-[url "https://github.com/"]
-# Map github ssh to https
-    insteadOf = "git@github.com:"
-
-[url "https://github.com/"]
-# Map github ssh to https
-    insteadOf = "git://github.com/"
-
 [color]
 # Switch colour on.
     ui = true
