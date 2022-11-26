@@ -1,13 +1,13 @@
 [user]
 	name = Alastair Montgomery
-  email = alastair@montgomery.me.uk
+  email = alastair.montgomery@bjss.com
 	signingkey = B38D6917
 [push]
 	default = simple
 [diff]
-	tool = meld
+	tool = vimdiff
 [merge]
-	tool = meld
+	tool = vimdiff
 [core]
 	editor = /usr/bin/vim
 	excludesfile = ~/.gitignore
