@@ -1,7 +1,7 @@
 #=============================================================================
 # basic.toml --- basic configuration example for SpaceVim
-# Copyright (c) 2016-2020 Wang Shidong & Contributors
-# Author: Wang Shidong < wsdjeg at 163.com >
+# Copyright (c) 2016-2022 Wang Shidong & Contributors
+# Author: Wang Shidong < wsdjeg@outlook.com >
 # URL: https://spacevim.org
 # License: GPLv3
 #=============================================================================
@@ -24,7 +24,7 @@
     windows_index_type = 3
     enable_tabline_filetype_icon = false
     enable_statusline_mode = false
-    statusline_unicode_symbols = false
+    statusline_unicode = false
     # Enable vim compatible mode, avoid changing origin vim key bindings
     vimcompatible = true
 
@@ -38,3 +38,27 @@ auto_completion_tab_key_behavior = "cycle"
 name = 'shell'
 default_position = 'top'
 default_height = 30
+
+[[layers]]
+    name = 'lang#python'
+[[layers]]
+    name = 'git'
+[[layers]]
+  name = 'VersionControl'
+[[layers]]
+  name = 'lang#dockerfile'
+[[layers]]
+  name = 'lang#toml'
+[[layers]]
+  name = 'lang#sh'
+[[layers]]
+  name = 'lang#markdown'
+
+[[custom_plugins]]
+  repo = 'hashivim/vim-terraform'
+  merged = false
+
+[[custom_plugins]]
+  repo = 'airblade/vim-gitgutter'
+  merged = false
+
