@@ -53,6 +53,8 @@ default_height = 30
   name = 'lang#sh'
 [[layers]]
   name = 'lang#markdown'
+[[layers]]
+  name = 'tmux'
 
 [[custom_plugins]]
   repo = 'hashivim/vim-terraform'
