@@ -83,8 +83,15 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
-source $HOME/gitrp/pcscripts/alias.sh
-source $HOME/gitrp/pcscripts/func_bash.sh
+
+if [[ -f "$HOME/bin/alias.sh" ]]; then
+  source "$HOME/bin/alias.sh"
+fi
+
+if [[ -d "$HOME/gitrp/pcscripts" ]]; then
+  source $HOME/gitrp/pcscripts/alias.sh
+  source $HOME/gitrp/pcscripts/func_bash.sh
+fi
 
 # User configuration
 
