@@ -127,3 +127,5 @@ fi
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
+
+. /home/linuxbrew/.linuxbrew/opt/asdf/libexec/asdf.sh
