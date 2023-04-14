@@ -1,7 +1,7 @@
-bat 0.22.1
+bat 0.23.0
 exa 0.10.1
 fd 8.1.1
-fzf 0.38.0
+fzf 0.39.0
 golang 1.19.2
 helm 3.5.2
 imagemagick system
@@ -23,3 +23,4 @@ terraform-docs v0.14.1
 terragrunt 0.23.12
 tflint 0.41.0
 tfsec 0.45.8
+awscli 2.8.13
