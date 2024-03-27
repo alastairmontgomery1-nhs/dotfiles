@@ -1,7 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 # Fig pre block. Keep at the top of this file.
 [[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
-export PATH=$HOME/bin:/usr/local/bin:$HOME/gitrp/code/python/automate_python:$HOME/.local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$HOME/gitrp/code/python/automate_python:$HOME/.local/bin:$HOME/.tfenv/bin:$PATH
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # Path to your oh-my-zsh installation.
