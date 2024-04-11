@@ -130,13 +130,14 @@ export REPOSITORY="http://s2c-nexus.spine2.ncrs.nhs.uk:8080/nexus/content/reposi
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
  eval "$(zoxide init --cmd cd zsh)"
- if ps -p $SSH_AGENT_PID > /dev/null
+
+if ps -p $SSH_AGENT_PID > /dev/null
 then
    echo "ssh-agent is already running"
    # Do something knowing the pid exists, i.e. the process with $PID is running
 else
-eval `ssh-agent -s`
- fi
+  eval `ssh-agent -s`
+fi
  
 if [[ -z "$TMUX" ]]; then
   tmux attach-session -t zsh_tmux || tmux new-session -s zsh_tmux
@@ -149,6 +150,5 @@ PERL_LOCAL_LIB_ROOT="/home/alastair/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LI
 PERL_MB_OPT="--install_base \"/home/alastair/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/alastair/perl5"; export PERL_MM_OPT;
 eval "$(zoxide init zsh)"
-
 eval "$(atuin init zsh)"
 
