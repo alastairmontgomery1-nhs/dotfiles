@@ -1,7 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 # Fig pre block. Keep at the top of this file.
 [[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
-export PATH=$HOME/bin:/usr/local/bin:$HOME/gitrp/code/python/automate_python:$HOME/.local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$HOME/gitrp/code/python/automate_python:$HOME/.local/bin:$HOME/.tfenv/bin:$PATH
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # Path to your oh-my-zsh installation.
@@ -44,13 +44,13 @@ zstyle ':omz:update' mode auto      # update automatically without asking
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # You can also set it to another string to have that shown instead of the default red dots.
 # e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
 # Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -101,11 +101,11 @@ fi
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='nvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+   export EDITOR='nvim'
+ else
+   export EDITOR='nvim'
+ fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -117,15 +117,37 @@ fi
 #
 # Example aliases
 alias zshconfig="vim ~/.zshrc"
+alias assume="source /usr/local/bin/assume"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 bindkey ^O forward-word
 
+export GPG_TTY=$(tty)
+export GIT_MERGE_AUTOEDIT=no
+export REPOSITORY="http://s2c-nexus.spine2.ncrs.nhs.uk:8080/nexus/content/repositories/packages"
+#. "$HOME/.asdf/asdf.sh"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+# eval "$(zoxide init --cmd cd zsh)"
+
+if ps -p $SSH_AGENT_PID > /dev/null
+then
+   echo "ssh-agent is already running"
+   # Do something knowing the pid exists, i.e. the process with $PID is running
+else
+  eval `ssh-agent -s`
+fi
+ 
 if [[ -z "$TMUX" ]]; then
   tmux attach-session -t zsh_tmux || tmux new-session -s zsh_tmux
 fi
+neofetch
 
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
+PATH="/home/alastair/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/home/alastair/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/home/alastair/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/home/alastair/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/alastair/perl5"; export PERL_MM_OPT;
+#eval "$(atuin init zsh)"
 
-. /home/linuxbrew/.linuxbrew/opt/asdf/libexec/asdf.sh
