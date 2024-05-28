@@ -133,8 +133,8 @@ export REPOSITORY="https://nexus.devspineservices.nhs.uk/nexus/content/repositor
 #. "$HOME/.asdf/asdf.sh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
- eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-# eval "$(zoxide init --cmd cd zsh)"
+[[ -f "/home/linuxbrew/.linuxbrew/bin/brew" ]] && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+eval "$(zoxide init --cmd cd zsh)"
 
 if ps -p $SSH_AGENT_PID > /dev/null
 then

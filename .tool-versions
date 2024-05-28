@@ -1,3 +1,4 @@
+aws-vault 7.2.0
 awscli 2.8.13
 bat 0.23.0
 exa 0.10.1
@@ -14,14 +15,14 @@ nodejs 21.6.2
 packer 1.10.3
 python 3.10.8
 ruby 3.3.0
-rust 1.64.0
+rust 1.78.0
 saml2aws 2.26.1
 skaffold 1.12.0
 starship 0.53.0
 task 3.23.0
-terraform 1.4.4
+terraform 0.15.3
 terraform-docs v0.14.1
 terragrunt 0.23.12
-tflint 0.41.0
-tfsec 0.45.8
+tflint 0.50.3
+tfsec 1.28.5
 zoxide 0.9.4
