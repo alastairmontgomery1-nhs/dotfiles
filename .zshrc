@@ -7,8 +7,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # If you come from bash you might have to change your $PATH.
-# Fig pre block. Keep at the top of this file.
-[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 export PATH=$HOME/bin:/usr/local/bin:$HOME/gitrp/code/python/automate_python:$HOME/.local/bin:$HOME/.tfenv/bin:$PATH
 
 # Path to your oh-my-zsh installation.
@@ -86,7 +84,6 @@ plugins=(
   git
   terraform
   tmux
-  z
   zsh-autosuggestions
 )
 
@@ -110,7 +107,7 @@ fi
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-   export EDITOR='nvim'
+   export EDITOR='vim'
  else
    export EDITOR='nvim'
  fi
@@ -132,7 +129,7 @@ bindkey ^O forward-word
 
 export GPG_TTY=$(tty)
 export GIT_MERGE_AUTOEDIT=no
-export REPOSITORY="http://s2c-nexus.spine2.ncrs.nhs.uk:8080/nexus/content/repositories/packages"
+export REPOSITORY="https://nexus.devspineservices.nhs.uk/nexus/content/repositories/packages"
 #. "$HOME/.asdf/asdf.sh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
