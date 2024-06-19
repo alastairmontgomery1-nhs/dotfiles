@@ -3,7 +3,7 @@ awscli 2.8.13
 bat 0.23.0
 exa 0.10.1
 fd 8.1.1
-fzf 0.39.0
+fzf 0.53.0
 golang 1.19.2
 helm 3.5.2
 imagemagick system
