@@ -35,7 +35,7 @@ fontconfig 2.13.1
 freetype 2.10.1 2.10.3
 frei0r 1.7.0
 fribidi 1.0.10 1.0.9
-fzf 0.20.0
+fzf 0.53.0
 gd 2.3.0
 gdbm 1.18.1_1 1.18.1
 gdk-pixbuf 2.40.0_1
