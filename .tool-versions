@@ -21,7 +21,7 @@ skaffold 1.12.0
 starship 0.53.0
 task 3.23.0
 terraform 0.15.3
-terraform-docs v0.14.1
+terraform-docs v0.18.0
 terragrunt 0.23.12
 tflint 0.50.3
 tfsec 1.28.5
