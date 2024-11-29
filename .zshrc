@@ -7,7 +7,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$HOME/gitrp/code/python/automate_python:$HOME/.local/bin:$HOME/.tfenv/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$HOME/gitrp/code/python/automate_python:$HOME/.local/bin:$HOME/.tfenv/bin:/home/spineii-user/.atuin/bin/:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -143,17 +143,21 @@ then
 else
   eval `ssh-agent -s`
 fi
+
+if [ -z "$SSH_AUTH_SOCK" ]; then
+  eval "$(ssh-agent -s)"
+  ssh-add
+fi
  
 if [[ -z "$TMUX" ]]; then
   tmux attach-session -t zsh_tmux || tmux new-session -s zsh_tmux
 fi
 
-PATH="/home/alastair/perl5/bin${PATH:+:${PATH}}"; export PATH;
-PERL5LIB="/home/alastair/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="/home/alastair/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"/home/alastair/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/home/alastair/perl5"; export PERL_MM_OPT;
-eval "$(atuin init zsh)"
+eval "$(/home/spineii-user/.atuin/bin/atuin init zsh)"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+. "$HOME/.atuin/bin/env"
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
