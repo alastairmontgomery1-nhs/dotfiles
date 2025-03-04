@@ -1,13 +1,16 @@
 [user]
-	email = alastair.montgomery1@nhs.net
 	name = Alastair Montgomery
-	signingkey = 0E9D135E507EC1FA
+	email = alastair.montgomery1@nhs.net
+	signingkey = /home/alastair/.ssh/id_ed25519.pub
 [alias]
 	ff = pull --ff-only
-  co = checkout
-  fp = fetch -p
-
+	co = checkout
+	fp = fetch -p
+[gpg]
+	format = ssh
 [diff]
 	tool = vimdiff
 [commit]
 	gpgsign = true
+[pull]
+	rebase = false

@@ -8,6 +8,7 @@ fi
 
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$HOME/gitrp/code/python/automate_python:$HOME/.local/bin:$HOME/.tfenv/bin:/home/spineii-user/.atuin/bin/:$PATH
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH:/home/alastair/.atuin/bin/"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -122,7 +123,7 @@ if [[ -n $SSH_CONNECTION ]]; then
 #
 # Example aliases
 alias zshconfig="vim ~/.zshrc"
-alias assume="source /usr/local/bin/assume"
+alias assume="source assume"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 bindkey ^O forward-word
@@ -153,11 +154,11 @@ if [[ -z "$TMUX" ]]; then
   tmux attach-session -t zsh_tmux || tmux new-session -s zsh_tmux
 fi
 
-eval "$(/home/spineii-user/.atuin/bin/atuin init zsh)"
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-. "$HOME/.atuin/bin/env"
+# . "$HOME/.atuin/bin/env"
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
+eval "$(atuin init zsh)"
+source ~/powerlevel10k/powerlevel10k.zsh-theme
