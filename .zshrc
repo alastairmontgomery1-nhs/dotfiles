@@ -7,8 +7,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$HOME/gitrp/code/python/automate_python:$HOME/.local/bin:$HOME/.tfenv/bin:/home/spineii-user/.atuin/bin/:$PATH
-export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH:/home/alastair/.atuin/bin/"
+export PATH=$HOME/bin:/usr/local/bin:$HOME/gitrp/code/python/automate_python:$HOME/.local/bin:$PATH
+export PATH=$HOME/.tfenv/bin/:"${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH:/home/alastair/.atuin/bin/"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -81,7 +81,10 @@ COMPLETION_WAITING_DOTS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  ansible
   asdf
+  aws
+  fzf
   git
   terraform
   tmux
@@ -131,7 +134,6 @@ bindkey ^O forward-word
 export GPG_TTY=$(tty)
 export GIT_MERGE_AUTOEDIT=no
 export REPOSITORY="https://nexus.devspineservices.nhs.uk/nexus/content/repositories/packages"
-#. "$HOME/.asdf/asdf.sh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [[ -f "/home/linuxbrew/.linuxbrew/bin/brew" ]] && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"

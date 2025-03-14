@@ -20,7 +20,7 @@ saml2aws 2.26.1
 skaffold 1.12.0
 starship 0.53.0
 task 3.23.0
-terraform 1.11.0
+terraform 1.11.2
 terraform-docs v0.18.0
 terragrunt 0.23.12
 tflint 0.50.3
