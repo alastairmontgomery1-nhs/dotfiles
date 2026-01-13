@@ -1,7 +1,6 @@
 aws-vault 7.2.0
-awscli 2.25.3
+awscli 2.32.33
 bat 0.25.0
-exa 0.10.1
 fd 10.3.0
 fzf 0.60.3
 golang 1.19.2
