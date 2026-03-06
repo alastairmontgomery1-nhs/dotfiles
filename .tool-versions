@@ -1,5 +1,5 @@
 aws-vault 7.2.0
-awscli 2.32.33
+awscli 2.33.12
 bat 0.25.0
 fd 10.3.0
 fzf 0.60.3
@@ -11,7 +11,7 @@ kind 0.8.1
 kubectl 1.18.3
 kustomize 3.6.1
 nodejs 24.10.0
-packer 1.12.0
+packer 1.15.0
 python 3.12.3
 ruby 3.3.0
 rust 1.90.0
@@ -20,7 +20,7 @@ skaffold 1.12.0
 starship 1.23.0
 task 3.23.0
 terraform 1.11.2
-terraform-docs 0.22.0
+terraform-docs 0.21.0
 terragrunt 0.23.12
 tflint 0.50.3
 tfsec 1.28.5
@@ -28,3 +28,4 @@ zoxide 0.9.7
 tfenv 0.4.0
 lua 5.4.7
 vault 1.21.1+ent
+trivy 0.69.1
